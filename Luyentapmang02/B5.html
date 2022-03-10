@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 5</title>
+  </head>
+  <body>
+    <button id="lesson5">lesson 5</button>
+    <p id="lessonX"></p>
+    <script>
+      let str = `<div> 
+<input type="text" id="number1">Nhập vào đây
+<input type="text" id="number2">Nhập vào đây
+<button onclick="runLesson()">Kiểm tra</button>
+</div>`;
+      document.querySelector("#lesson5").addEventListener("click", runLesson5);
+      function runLesson5() {
+        document.getElementById("lessonX").innerHTML = str;
+      }
+      function runLesson() {
+        let number1 = document.getElementById("number1").value;
+        let number2 = document.getElementById("number2").value;
+        let num1 = number1.split("");
+        let num2 = number2.split("");
+        for (let i = 0; i < num1.length; i++) {
+          if (num1[i] == num2[i]) {
+            alert(`2 chuỗi này giống nhau`);
+            break;
+          } else {
+            alert(`2 chuỗi này không giống nhau`);
+            break;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

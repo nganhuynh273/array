@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <div class="typeArray">
+        <label for="" id=""> type min</label><br>
+        <input type="number" id="min"> <br>
+        <label for="" id=""> type max</label><br>
+        <input type="number" id="max"> <br>
+        <label for=""> size Array</label><br>
+        <input type="number" id="size"> <br>
+        <button onclick="createArray()" class="runPro">run</button>
+        <p id="showLesson"></p>
+    </div>
+    <div>
+        
+        <button onclick="lesson3()">Lesson 3</button>
+        <p id="maxNumber"></p>
+    </div>
+    <script>
+function lesson3() {
+        var lengthArr = arr.length;
+        max = arr[0];
+        sum = 0;
+        for (let findMax = 0; findMax < lengthArr; findMax++) {
+            if ( max < arr[findMax] ) {
+                 max = arr[findMax] ;
+            }
+            sum += arr[findMax];
+        }
+        let avg = sum / lengthArr;
+        document.getElementById('maxAvg').innerHTML = `${avg}`;
+    }
+    </script>
+    
+    
+</body>
+</html>

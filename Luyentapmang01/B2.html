@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2</title>
+</head>
+
+<body>
+    <div class="typeArray">
+        <label for="" id=""> type max </label><br>
+        <input type="number" id="max"> <br>
+        <label for=""> size Array</label><br>
+        <input type="number" id="size"> <br>
+        
+    
+    </div>
+    <div>
+        <button onclick="lesson2()">Kết quả</button>
+        <p id="maxNumber"></p>
+    </div>
+    <script>
+        function lesson2() {
+            max = arr[0];
+            var lengthArr = arr.length;
+
+            for (let findMax = 0; findMax < lengthArr; findMax++) {
+                if (max < arr[findMax]) {
+                    max = arr[findMax];
+
+                }
+            }
+            document.getElementById('maxNumber').innerHTML = `the largest number is : ${max} ,
+    located in position : ${arr.indexOf(max)}`;
+        }
+    </script>
+</body>
+
+</html>

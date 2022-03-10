@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Ứng dụng vui Faking Textarea on Typing</title>
+</head>
+<style>
+    .container {
+        margin: auto;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Type anything slowly</h1>
+        <textarea name="FakingText" id="FakingTyping" cols="50" rows="10" onkeydown="inputText()" onfocus="this.value=''"></textarea>
+    </div>
+    <script>
+        let textinput = document.getElementById("FakingTyping");
+        let str = "You are beautiful";
+        let n = 1;
+        function inputText() {
+            console.log("Hello");
+            textinput.value = str.substr(0,n);
+            ++n;
+        }
+    </script>
+</body>
+</html>

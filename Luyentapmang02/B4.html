@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 4</title>
+  </head>
+  <body>
+    <button onclick="lesson4()">lesson 4</button>
+    <script>
+      let arr = ["a", "b", "c", 1, 2, "n", "t", 4, 8, 0, 10];
+      function lesson4() {
+        count = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (typeof arr[i] == "string") {
+            count++;
+          }
+        }
+        document.write(`in the array with the number of words : ${count}`);
+      }
+    </script>
+  </body>
+</html>
